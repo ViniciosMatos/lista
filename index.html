@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+
+    <main>
+        <section class="addTarefas">
+            <input type="text" id="tarefa" placeholder="Adicionar tarefa" maxlength="80">
+            <select id="prioridade">
+                <option value="alta" selected>Alta</option>
+                <option value="media">Média</option>
+                <option value="baixa">Baixa</option>
+            </select>
+            <button onclick="adicionarTarefa()">Adicionar</button>
+            <p class="hidden" id="aviso">O campo da tarefa não pode estar vazio.</p>
+        </section>
+
+        <section class="legenda">
+            <h2>Prioridades</h2>
+            <p class="alta-prioridade">Alta</p>
+            <p class="media-prioridade">Média</p>
+            <p class="baixa-prioridade">Baixa</p>
+        </section>
+
+        <section id="tarefasPendentes">
+            <h2>Pendentes</h2>
+        </section>
+
+        <section id="tarefasConcluidas">
+            <h2>Concluídas</h2>
+        </section>
+    </main>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

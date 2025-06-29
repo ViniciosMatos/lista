@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    font-size: large;
+}
+/* SEÇÃO PARA ADICIONAR TAREFAS */
+.addTarefas{
+    align-self: center;
+    margin: 0 0 30px 0;
+    & p{
+        color: red;
+        padding-left: 10px;
+    } 
+}
+input{
+    font-size: large;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+select{
+    font-size: large;
+    padding: 8px;
+    border-radius: 5px;
+}
+.addTarefas button{
+    font-size: large;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    border: 1px solid;
+}
+
+.hidden{
+    visibility: hidden;
+}
+/* SEÇÃO DE LEGENDA */
+.legenda{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 15px 10px;
+    & p{
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+}
+h2{
+    margin-bottom: 15px;
+    width: 100%;
+}
+/* SEÇÃO PARA TAREFAS PENDENTES */
+#tarefasPendentes{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+.todasTarefas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px; 
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+.todasTarefas button{
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+    margin: 0 5px
+}
+.btn-concluir{
+    font-size: medium;
+    color: rgb(25, 136, 25);
+}
+.btn-remover{
+    font-size: medium;
+    color: red;
+}
+.ml-25{
+    margin-left: 25px;
+}
+/* SEÇÃO PARA TAREFAS CONCLUÍDAS */
+#tarefasConcluidas{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+
+
+
+
+
+.alta-prioridade{
+    background-color: rgb(255, 131, 131);
+}
+.media-prioridade{
+    background-color: rgb(255, 211, 131);
+}
+.baixa-prioridade{
+    background-color: rgb(146, 223, 159);
+}
