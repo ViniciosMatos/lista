@@ -15,14 +15,17 @@
 
     <main>
         <section class="addTarefas">
-            <input type="text" id="tarefa" placeholder="Adicionar tarefa" maxlength="80">
+            <div>
+                <input type="text" id="tarefa" placeholder="Adicionar tarefa" maxlength="80">
+                <p class="hidden" id="aviso">O campo da tarefa não pode estar vazio.</p>
+            </div>
             <select id="prioridade">
                 <option value="alta" selected>Alta</option>
                 <option value="media">Média</option>
                 <option value="baixa">Baixa</option>
             </select>
             <button onclick="adicionarTarefa()">Adicionar</button>
-            <p class="hidden" id="aviso">O campo da tarefa não pode estar vazio.</p>
+
         </section>
 
         <section class="legenda">

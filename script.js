@@ -9,9 +9,15 @@ function adicionarTarefa(){
         aviso.classList.remove('hidden')
     }else{
         aviso.classList.add('hidden')
+        
+        const textoTarefa = document.createElement('p')
+        textoTarefa.textContent = tarefa.value
 
         const novaTarefa = document.createElement('div')
-        novaTarefa.textContent = tarefa.value
+        novaTarefa.appendChild(textoTarefa)
+
+        // const novaTarefa = document.createElement('div')
+        // novaTarefa.textContent = tarefa.value
 
         const btnConcluir = document.createElement('button')
         btnConcluir.textContent = "Concluir"
