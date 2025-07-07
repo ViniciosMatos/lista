@@ -63,11 +63,11 @@ function adicionarTarefa(){
 
 function pegarData(){
     const data = new Date()
-    const dia = data.getDate()
-    const mes = data.getMonth() + 1
-    const hora = data.getHours()
-    const minuto = data.getMinutes()
-    const segundo = data.getSeconds()
+    const dia = String(data.getDate()).padStart(2, '0')
+    const mes = String(data.getMonth()+1).padStart(2, '0')
+    const hora = String(data.getHours()).padStart(2, '0')
+    const minuto = String(data.getMinutes()).padStart(2, '0')
+    const segundo = String(data.getSeconds()).padStart(2, '0')
 
     return `${dia}/${mes} às ${hora}:${minuto}:${segundo}`
 }
