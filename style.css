@@ -23,7 +23,6 @@ main {
 /* SEÇÃO PARA ADICIONAR TAREFAS */
 .addTarefas {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: start;
     margin: 0 0 30px 0;
@@ -99,21 +98,22 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    min-height: 50px;
     border-radius: 5px;
     padding: 0 10px;
     margin-bottom: 10px;
 
-    & div {
-        border: 1px solid;
-    }
     & p {
-        color: blue;
-        border: 1px solid;
-        width: 85%;
-        
-   }
-    
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    & div {
+        display: flex;
+        justify-content: end;
+        width: 25%;
+    }
 
     & button {
         text-decoration: underline;
@@ -123,15 +123,8 @@ h2 {
     }
 }
 
-.todasTarefas button {
-    text-decoration: underline;
-    border: none;
-    background-color: transparent;
-    margin: 0 5px
-}
-
 .btn-concluir {
-    font-size: ;
+    font-size: medium;
     color: rgb(25, 136, 25);
 }
 
@@ -149,6 +142,16 @@ h2 {
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 10px 10px;
+
+    & .titulo {
+        display: flex;
+        justify-content: space-between;
+        & p {
+            width: 20%;
+            padding-top: 1%;
+        }
+    }
+
 }
 
 .alta-prioridade {
@@ -163,19 +166,53 @@ h2 {
     background-color: rgb(146, 223, 159);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    main {
+        width: 80%;
+    }
+
     .addTarefas {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
+
+        & input {
+            width: 100%;
+        }
+
+        & select {
+            width: 20%;
+        }
+
+        &.addTarefas button {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 100%;
     }
 
-    select {
-        width: 40%;
+    .todasTarefas {
+        & p {
+            width: 85%;
+        }
+
+        & div {
+            flex-direction: column;
+        }
     }
 
-    .addTarefas button {
-        width: 40%;
+    #tarefasConcluidas {
+        & .titulo {
+            & p {
+                width: 50%;
+                padding-top: 3%;
+            }
+        }
+
     }
 }

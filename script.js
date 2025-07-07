@@ -69,5 +69,5 @@ function pegarData(){
     const minuto = data.getMinutes()
     const segundo = data.getSeconds()
 
-    return `Tarefa concluída em: ${dia}/${mes} às ${hora}:${minuto}:${segundo}`
+    return `${dia}/${mes} às ${hora}:${minuto}:${segundo}`
 }
